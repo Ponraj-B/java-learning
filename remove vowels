@@ -1,0 +1,46 @@
+Write a program that will take one string as input. 
+The program will then remove vowels a, e, i, o,  u (in lower or upper case ) from the string.
+If there are two or more vowels that occur together then the program shall ignore all of those vowels.
+ 
+Example 1
+ 
+Input:  Cat
+Output:  Ct
+Example 2
+ 
+Input:  Compuuter
+Output: Cmpuutr
+
+JAVA CODE :
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner sc = new Scanner(System.in);
+      String given = sc.next();
+      StringBuilder sb = new StringBuilder();
+      int ctr = 0;
+      String temp = "";
+      for(int i=0;i<given.length();i++)
+      {
+          if(!check(given.charAt(i)))
+          {
+              if(temp.length()>1)
+              sb.append(temp);
+              sb.append(given.charAt(i));
+              temp="";
+          }
+          else
+          temp+=given.charAt(i);
+      }
+      System.out.println(sb.toString());
+    }
+    
+    public static boolean check(char c)
+    {
+        char s = Character.toUpperCase(c);
+        if(s=='A' || s=='E' || s=='I' || s=='O' || s=='U')
+        return true;
+        return false;
+    }
+}
