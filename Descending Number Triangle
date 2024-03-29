@@ -1,0 +1,39 @@
+print this pattern using single java loop with efficient way. the program should be run very fastly with low time and space complexity
+
+   1
+
+  3 2
+
+ 6 5 4
+
+10 9 8 7
+
+10 9 8 7
+
+ 6 5 4
+
+  3 2
+   
+   1
+
+JAVA CODE :
+
+public class MyClass {
+    public static void main(String args[]) 
+    {
+        int n = 4;
+        int num = 0;
+        int temp = num;
+        for(int i=0;i<n;i++)
+        {
+            num+=(i+1);
+            temp = num;
+            for(int j=0;j<=i;j++)
+            {
+                System.out.print(temp+" ");
+                temp--;
+            }
+            System.out.println();
+        }
+    }
+}
