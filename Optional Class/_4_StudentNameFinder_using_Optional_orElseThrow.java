@@ -15,7 +15,7 @@ class Main
         
         try
         {
-            String name = Main.findNameById(target).orElseThrow(() -> new RuntimeException("Value " + target +" is not existing")); // Using OrElseThrow we can throw an Exception or Error if the the returned value from of or ofNullable is null 
+            String name = Main.findNameById(target).orElseThrow(() -> new RuntimeException("Value " + target +" is not existing")); // Using OrElseThrow we can throw an Exception or Error if the the returned value from ofNullable is null 
         }
         catch(Exception e)
         {
