@@ -1,0 +1,268 @@
+// =============================================
+// Program 1: ArrayListDemo.java
+// =============================================
+import java.util.*;
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+
+        // Collection methods
+        list.add("Hello");
+        list.add("World");
+        list.add("Java");
+        System.out.println("ArrayList: " + list);
+
+        List<String> additionalList = Arrays.asList("Programming", "Language");
+        list.addAll(additionalList);
+        System.out.println("After addAll: " + list);
+
+        System.out.println("Contains 'Java': " + list.contains("Java"));
+        System.out.println("Contains all: " + list.containsAll(additionalList));
+        System.out.println("Size: " + list.size());
+        System.out.println("Is empty: " + list.isEmpty());
+
+        list.remove("Hello");
+        list.removeAll(additionalList);
+        List<String> retainList = Arrays.asList("World", "Java");
+        list.retainAll(retainList);
+        Object[] array = list.toArray();
+        String[] typedArray = list.toArray(new String[0]);
+        list.clear();
+
+        // List-specific methods
+        list.add(0, "First");
+        list.add("Second");
+        String element = list.get(0);
+        list.set(0, "Updated First");
+        list.remove(0);
+        int index = list.indexOf("Second");
+        list.add("Second");
+        int lastIndex = list.lastIndexOf("Second");
+        list.add("Third");
+        List<String> sublist = list.subList(1, 3);
+
+        System.out.println("Final ArrayList: " + list);
+    }
+}
+
+// =============================================
+// Program 2: LinkedListDemo.java
+// =============================================
+import java.util.*;
+
+public class LinkedListDemo {
+    public static void main(String[] args) {
+        LinkedList<String> list = new LinkedList<>();
+
+        // Collection methods
+        list.add("One");
+        list.add("Two");
+        list.add("Three");
+        list.remove("Two");
+        System.out.println("Size: " + list.size());
+
+        // List-specific methods
+        list.add(1, "Inserted");
+        System.out.println("Get(0): " + list.get(0));
+        list.set(0, "Updated");
+        list.remove(1);
+
+        // LinkedList-specific methods
+        list.addFirst("Start");
+        list.addLast("End");
+        list.removeFirst();
+        list.removeLast();
+        System.out.println("Final LinkedList: " + list);
+    }
+}
+
+// =============================================
+// Program 3: VectorDemo.java
+// =============================================
+import java.util.*;
+
+public class VectorDemo {
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+
+        // Collection methods
+        vector.add("Alpha");
+        vector.add("Beta");
+        vector.remove("Alpha");
+
+        // List methods
+        vector.add(0, "Gamma");
+        vector.set(0, "Delta");
+
+        // Vector-specific methods
+        System.out.println("Capacity: " + vector.capacity());
+        vector.ensureCapacity(20);
+        vector.trimToSize();
+        System.out.println("Final Vector: " + vector);
+    }
+}
+
+// =============================================
+// Program 4: StackDemo.java
+// =============================================
+import java.util.*;
+
+public class StackDemo {
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<>();
+
+        // Collection methods
+        stack.add("A");
+        stack.add("B");
+
+        // List methods
+        stack.add(1, "C");
+
+        // Stack-specific methods
+        stack.push("Top");
+        System.out.println("Pop: " + stack.pop());
+        System.out.println("Peek: " + stack.peek());
+        System.out.println("Final Stack: " + stack);
+    }
+}
+
+// =============================================
+// Program 5: HashSetDemo.java
+// =============================================
+import java.util.*;
+
+public class HashSetDemo {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+
+        // Collection methods
+        set.add("X");
+        set.add("Y");
+        set.remove("X");
+
+        // Set methods (inherited)
+        System.out.println("Contains Y: " + set.contains("Y"));
+
+        // HashSet-specific: no direct new methods but uses hash-based storage
+        System.out.println("Final HashSet: " + set);
+    }
+}
+
+// =============================================
+// Program 6: LinkedHashSetDemo.java
+// =============================================
+import java.util.*;
+
+public class LinkedHashSetDemo {
+    public static void main(String[] args) {
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+
+        // Collection methods
+        set.add("One");
+        set.add("Two");
+        set.remove("One");
+
+        // Set methods
+        System.out.println("Contains Two: " + set.contains("Two"));
+
+        // Maintains insertion order
+        set.add("Three");
+        System.out.println("Final LinkedHashSet: " + set);
+    }
+}
+
+// =============================================
+// Program 7: TreeSetDemo.java
+// =============================================
+import java.util.*;
+
+public class TreeSetDemo {
+    public static void main(String[] args) {
+        TreeSet<String> set = new TreeSet<>();
+
+        // Collection methods
+        set.add("Cat");
+        set.add("Apple");
+        set.remove("Cat");
+
+        // Set methods
+        System.out.println("Contains Apple: " + set.contains("Apple"));
+
+        // TreeSet-specific methods
+        set.add("Banana");
+        System.out.println("First: " + set.first());
+        System.out.println("Last: " + set.last());
+        System.out.println("Final TreeSet: " + set);
+    }
+}
+
+// =============================================
+// Program 8: QueueUsingLinkedListDemo.java
+// =============================================
+import java.util.*;
+
+public class QueueUsingLinkedListDemo {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+
+        // Collection methods
+        queue.add("One");
+        queue.add("Two");
+
+        // Queue-specific methods
+        queue.offer("Three");
+        System.out.println("Peek: " + queue.peek());
+        queue.poll();
+        System.out.println("Final Queue: " + queue);
+    }
+}
+
+// =============================================
+// Program 9: PriorityQueueDemo.java
+// =============================================
+import java.util.*;
+
+public class PriorityQueueDemo {
+    public static void main(String[] args) {
+        PriorityQueue<String> pq = new PriorityQueue<>();
+
+        // Collection methods
+        pq.add("Orange");
+        pq.add("Apple");
+
+        // Queue-specific methods
+        System.out.println("Peek: " + pq.peek());
+        pq.poll();
+
+        // PriorityQueue-specific: natural ordering
+        pq.offer("Banana");
+        System.out.println("Final PriorityQueue: " + pq);
+    }
+}
+
+// =============================================
+// Program 10: ArrayDequeDemo.java
+// =============================================
+import java.util.*;
+
+public class ArrayDequeDemo {
+    public static void main(String[] args) {
+        ArrayDeque<String> deque = new ArrayDeque<>();
+
+        // Collection methods
+        deque.add("One");
+        deque.add("Two");
+
+        // Queue methods
+        deque.offer("Three");
+        deque.poll();
+
+        // Deque-specific methods
+        deque.addFirst("Zero");
+        deque.addLast("Last");
+        deque.removeFirst();
+        deque.removeLast();
+        System.out.println("Final ArrayDeque: " + deque);
+    }
+}
