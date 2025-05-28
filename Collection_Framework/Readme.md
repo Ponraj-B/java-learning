@@ -2,7 +2,7 @@ Collection Iteration : <br>
 
  1) Iterate using Iterator : <br>
     <blockquote>Syntax : <br>
-    <blockquote><blockquote>  Iterator<data_type> i = collection_object.iterator(); <br>
+    Iterator<data_type> i = collection_object.iterator(); <br>
     Methods : <br>
       . hasNext() - checks iterator having further values <br>
       . next() - gives next value <br>
