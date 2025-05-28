@@ -1,14 +1,14 @@
-Collection Iteration :
+Collection Iteration : <br>
 
- 1) Iterate using Iterator :
-    Syntax :
-      Iterator<data_type> i = collection_object.iterator();
-    Methods :
-      . hasNext() - checks iterator having further values 
-      . next() - gives next value
-      . remove() - will remove the value returned by the next() method from the source
+ 1) Iterate using Iterator : <br>
+    Syntax : <br>
+      Iterator<data_type> i = collection_object.iterator(); <br>
+    Methods : <br>
+      . hasNext() - checks iterator having further values <br>
+      . next() - gives next value <br>
+      . remove() - will remove the value returned by the next() method from the source <br><br>
 
-3) Using forEach() :
-   Syntax :
-     collection_object.forEach(n -> System.out.println(n));
+3) Using forEach() : <br>
+   Syntax : <br>
+     collection_object.forEach(n -> System.out.println(n)); <br>
    
